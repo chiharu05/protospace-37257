@@ -4,10 +4,9 @@
       <div class="greeting">
         <span>こんにちは</span><%= link_to current_user.name, user_path(id: current_user), class: :greeting__link,method: :get %><span>さん</span>
       </div>
-    <% else %>
-      <div class="card__wrapper">
-      </div>
     <% end %>
+      <div class="card__wrapper">
     <%= render partial: 'prototype', collection: @prototypes %>
+    </div>
   </div>
 </main>
