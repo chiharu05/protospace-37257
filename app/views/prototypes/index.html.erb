@@ -3,11 +3,11 @@
     <% if user_signed_in? %>
       <div class="greeting">
         <span>こんにちは</span><%= link_to current_user.name, user_path(id: current_user), class: :greeting__link,method: :get %><span>さん</span>
-        <%= render partial: 'prototype', collection: @prototypes %>
       </div>
     <% else %>
       <div class="card__wrapper">
       </div>
     <% end %>
+    <%= render partial: 'prototype', collection: @prototypes %>
   </div>
 </main>
